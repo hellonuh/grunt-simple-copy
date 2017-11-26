@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com/)
+[![Build status Window](https://ci.appveyor.com/api/projects/status/bo4hpc1mwa26a39n/branch/master?svg=true)](https://ci.appveyor.com/project/hellonuh/grunt-simple-copy/branch/master)
+
 
 > A simple plugin to quickly copy files and folders without any processing.
 
