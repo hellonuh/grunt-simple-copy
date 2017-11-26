@@ -6,7 +6,7 @@
 > A simple plugin to quickly copy files and folders without any processing.
 
 ## Getting Started
-This plugin requires Grunt `>1.0.0`
+This plugin requires Grunt `^0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 
@@ -22,68 +22,40 @@ grunt.loadNpmTasks('grunt-simple-copy');
 
 ## The "simple_copy" task
 
-### Overview
+### Usage
 In your project's Gruntfile, add a section named `simple_copy` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
-  simple_copy: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+    simple_copy: {
+        main:{
+          files:{
+            'destination': [ 'source_folder','source_file'],
+          }
+        }
+    }
 });
 ```
 
-### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
-
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
-
-### Usage Examples
-
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
-
+### Sample
 ```js
 grunt.initConfig({
-  simple_copy: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
+    simple_copy: {
+        main:{
+          files:{
+            'tmp/dist': [ 'test/fixtures/src/js','test/fixtures/src/index.html'],
+          }
+        }
+    }
 });
 ```
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+### Limitations
+- `No support for ignoring files`. This is done intentionally to avoid complexity.
 
-```js
-grunt.initConfig({
-  simple_copy: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+For full featured copy plugin use the official `grunt-contrib-copy`
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
@@ -91,6 +63,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 - This release is taking care of the first requirement.
+
 ## License
 MIT License
 
