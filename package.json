@@ -1,0 +1,39 @@
+{
+  "name": "grunt-simple-copy",
+  "description": "A simple plugin to quickly copy files and folders without any processing.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/hellonuh/grunt-simple-copy",
+  "author": {
+    "name": "Neyazul Haque",
+    "email": "hellonuh@nuhaque.com",
+    "url": "http://hellonuh.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hellonuh/grunt-simple-copy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hellonuh/grunt-simple-copy/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/hellonuh/grunt-simple-copy/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">6.9.1"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "^0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
