@@ -25,7 +25,8 @@
     "node": ">6.9.1"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "patch": "npm version patch && npm publish && git push && git push --tag"
   },
   "devDependencies": {
     "dir-compare": "^1.4.0",
