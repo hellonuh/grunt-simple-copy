@@ -21,14 +21,20 @@ module.exports = function(grunt) {
     simple_copy: {
         main:{
           files:{
-            'tmp/dist': [ 'test/fixtures/src/js','test/fixtures/src/css','test/fixtures/src/fakeindex.html','test/fixtures/src/index.html'],
+            'tmp/dist': [ 'test/fixtures/src/js','test/fixtures/src/css','test/fixtures/src/fakeindex.html','test/fixtures/src/index.html']
           }
-        } 
+        },
+        dir:{
+          files:{
+            'tmp': [ 'test/fixtures/src']
+          }
+        }  
     },
 
     // Unit tests.
     nodeunit: {
-      tests: ['test/*_test.js']
+      test1: ['test/simple_copy_test.js'],
+      test2: ['test/simple_copy_dir_test.js']
     }
 
   });
@@ -42,7 +48,9 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'simple_copy', 'nodeunit']);
+  grunt.registerTask('test1', ['clean', 'simple_copy:main', 'nodeunit:test1']);
+  grunt.registerTask('test2', ['clean', 'simple_copy:dir', 'nodeunit:test2']);
+  grunt.registerTask('test', ['test1','test2']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['simple_copy']);
