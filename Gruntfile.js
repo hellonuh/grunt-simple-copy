@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     simple_copy: {
         main:{
           files:{
-            'tmp/dist': [ 'test/fixtures/src/js','test/fixtures/src/css','test/fixtures/src/index.html'],
+            'tmp/dist': [ 'test/fixtures/src/js','test/fixtures/src/css','test/fixtures/src/fakeindex.html','test/fixtures/src/index.html'],
           }
         } 
     },
@@ -45,6 +45,6 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['clean', 'simple_copy', 'nodeunit']);
 
   // By default, lint and run all tests.
-  grunt.registerTask('default', ['test']);
+  grunt.registerTask('default', ['simple_copy']);
 
 };
