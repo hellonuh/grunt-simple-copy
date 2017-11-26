@@ -1,5 +1,8 @@
 # grunt-simple-copy
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](https://gruntjs.com/)
+
 > A simple plugin to quickly copy files and folders without any processing.
 
 ## Getting Started
@@ -85,5 +88,10 @@ grunt.initConfig({
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 
+
 ## Release History
-_(Nothing yet)_
+- This release is taking care of the first requirement.
+## License
+MIT License
+
+Copyright (c) 2017 Neyazul Haque
