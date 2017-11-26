@@ -19,24 +19,11 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     simple_copy: {
-        // type1Copy:{
-        //   files:{
-        //     'tmp/dist': 'test/src/js',
-        //     'tmp/dist': 'test/src/css',
-        //     'tmp/dist': 'test/src/index.html',
-        //   }
-        // },
-        // type2Copy:{
-        //   files:{
-        //     'tmp/dist': [ 'test/src/js','test/src/css','test/src/index.html'],
-        //   }
-        // },
-        temp:{
-          files:[{
-            src: [ 'test/src/js','test/src/css','test/src/index.html'],
-            dest: 'tmp/dist'
-          }]
-        }    
+        main:{
+          files:{
+            'tmp/dist': [ 'test/fixtures/src/js','test/fixtures/src/css','test/fixtures/src/index.html'],
+          }
+        } 
     },
 
     // Unit tests.
