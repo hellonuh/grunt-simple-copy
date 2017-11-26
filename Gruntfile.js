@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         },
         dir:{
           files:{
-            'tmp': [ 'test/fixtures/src']
+            'tmp': [ 'test/fixtures/src/*']
           }
         }  
     },

@@ -21,7 +21,11 @@ module.exports = function(grunt) {
     try{
         const st = fs.lstatSync(src);
         if(st.isDirectory()){
-            shell.mkdir('-p', dest);
+          try{
+            fs.lstatSync(dest);
+          }catch(err){
+            shell.mkdir('-p', dest); 
+          }
         }
         shell.cp('-rf', src, dest);
         return `${src} copy success.`;
@@ -41,7 +45,7 @@ module.exports = function(grunt) {
       }
       f.src.forEach(src => {
         try{
-          const res = simpleCopy(src,f.dest);
+          const res = simpleCopy(path.resolve(src),path.resolve(f.dest));
           grunt.log.write(`INFO: ${res}\n`);
         } catch(err){
           grunt.log.warn(`WARN: ${err.message}`);
