@@ -36,13 +36,6 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('simple_copy', 'A simple plugin to quickly copy files and folders without any processing.', function() {
     this.files.forEach(f=>{
-      if(f.src.length !== f.orig.src.length){
-        f.orig.src.forEach(v=>{
-          if(f.src.indexOf(v) === -1){
-            grunt.log.warn(`WARN: ${v} does not exist`);
-          }
-        });
-      }
       f.src.forEach(src => {
         try{
           const res = simpleCopy(path.resolve(src),path.resolve(f.dest));
