@@ -1,7 +1,7 @@
 {
   "name": "grunt-simple-copy",
   "description": "A simple plugin to quickly copy files and folders without any processing.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/hellonuh/grunt-simple-copy",
   "author": {
     "name": "Neyazul Haque",
